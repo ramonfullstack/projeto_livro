@@ -6,8 +6,8 @@ import Link from 'next/link';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Book Store',
-  description: 'A modern book store application',
+  title: 'Books',
+  description: 'A modern app about books',
 };
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
               <div className="flex justify-between h-16 items-center">
                 <div className="flex-shrink-0">
                   <Link href="/" className="text-2xl font-bold text-primary-600 hover:text-primary-700">
-                    BookStore
+                    List of Books
                   </Link>
                 </div>
                 <nav className="flex items-center space-x-8">
