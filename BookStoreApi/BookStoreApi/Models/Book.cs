@@ -7,7 +7,9 @@ namespace BookStoreApi.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+        [BsonIgnoreIfDefault]
+        [BsonIgnoreIfNull]
+        public string? Id { get; set; }
 
         [BsonElement("Name")]
         public string Name { get; set; }

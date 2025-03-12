@@ -21,7 +21,7 @@ namespace BookStoreApi.Controllers
         public async Task<ActionResult<List<Book>>> Get() =>
             await _bookService.GetAsync();
 
-        [HttpGet("{id:length(24)}", Name = "GetBook")]
+        [HttpGet("{id}", Name = "GetBook")]
         public async Task<ActionResult<Book>> Get(string id)
         {
             var book = await _bookService.GetAsync(id);
@@ -42,7 +42,7 @@ namespace BookStoreApi.Controllers
             return CreatedAtRoute("GetBook", new { id = book.Id }, book);
         }
 
-        [HttpPut("{id:length(24)}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Update(string id, Book bookIn)
         {
             var book = await _bookService.GetAsync(id);
@@ -57,7 +57,7 @@ namespace BookStoreApi.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id:length(24)}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(string id)
         {
             var book = await _bookService.GetAsync(id);
