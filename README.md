@@ -1,7 +1,5 @@
-# projeto_livroI'll create a comprehensive README for your project that explains how to run both the .NET API and the Next.js application.
-
 ```markdown:d:\Repositorios Github\projeto_livro\README.md
-# Book Store Project
+# Book Project
 
 This project consists of two parts:
 - A .NET API backend (BookStoreApi)
